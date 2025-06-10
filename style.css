@@ -1,6 +1,8 @@
-/* 전체 배경 및 폰트 스타일 */
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css');
+
+/* 전체 스타일 */
 body {
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'GmarketSans', sans-serif;
   background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
   background-image: 
     url('https://cdn-icons-png.flaticon.com/512/1046/1046843.png'),
@@ -8,7 +10,6 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-position: top 30px right 30px, center;
   background-size: 120px, cover;
-  
   color: #333;
   padding: 40px;
   line-height: 1.6;
@@ -17,11 +18,20 @@ body {
 /* 제목 */
 h1 {
   text-align: center;
+  font-size: 36px;
   color: #d35400;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-/* 폼 스타일 */
+h1::after {
+  content: "🍱 오늘의 도시락을 추천해드릴게요!";
+  display: block;
+  font-size: 16px;
+  color: #8e4400;
+  margin-top: 5px;
+}
+
+/* 폼 박스 */
 form {
   background: #ffffff;
   border: 2px solid #f0e1c0;
@@ -29,9 +39,10 @@ form {
   padding: 30px;
   max-width: 500px;
   margin: 0 auto 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* 라벨 + 선택 박스 */
 label {
   display: block;
   margin-bottom: 15px;
@@ -47,7 +58,7 @@ select {
   font-size: 14px;
 }
 
-/* 추천 버튼 */
+/* 버튼 */
 button {
   background-color: #f39c12;
   color: white;
@@ -58,20 +69,21 @@ button {
   font-size: 16px;
   width: 100%;
   margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
   background-color: #e67e22;
 }
 
-/* 결과 출력 카드 */
+/* 결과 카드 */
 #result {
   max-width: 500px;
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 16px;
   padding: 25px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   border: 2px solid #fae3b4;
 }
 
