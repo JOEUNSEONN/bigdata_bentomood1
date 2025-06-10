@@ -10,8 +10,11 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
 
     .then((response) => response.json())
     .then((data) => {
-      const key = `${weather}_${mood}_${meal}`;
-      const menuList = data[key];
+  const key = `${weather}_${mood}_${meal}`;
+  const menuList = data[key];
+
+  console.log("선택된 키:", key);           // ✅ 고친 위치
+  console.log("메뉴 목록:", menuList);     // ✅ 고친 위치
 
       if (menuList && menuList.length > 0) {
         const randomIndex = Math.floor(Math.random() * menuList.length);
