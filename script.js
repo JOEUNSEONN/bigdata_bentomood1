@@ -5,21 +5,25 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
   const mood = document.getElementById("mood").value;
   const meal = document.getElementById("meal").value;
 
-  // 데이터 로드
   fetch("https://joeunseonn.github.io/bigdata_bentomood1/data.json")
-
     .then((response) => response.json())
     .then((data) => {
-  const key = `${weather}_${mood}_${meal}`;
-  const menuList = data[key];
+      const key = `${weather}_${mood}_${meal}`;
+      const menuList = data[key];
 
-  console.log("선택된 키:", key);           // ✅ 고친 위치
-  console.log("메뉴 목록:", menuList);     // ✅ 고친 위치
+      console.log("선택된 키:", key);
+      console.log("메뉴 목록:", menuList);
 
       if (menuList && menuList.length > 0) {
         const randomIndex = Math.floor(Math.random() * menuList.length);
         const menu = menuList[randomIndex];
 
+        // ✅ 추천된 메뉴 저장 (localStorage)
+        const popularityKey = `${key}:${menu.main}`;
+        const currentCount = localStorage.getItem(popularityKey);
+        localStorage.setItem(popularityKey, currentCount ? parseInt(currentCount) + 1 : 1);
+
+        // 출력
         const resultDiv = document.getElementById("result");
         resultDiv.innerHTML = `
           <h2>오늘의 추천 도시락 🍱</h2>
