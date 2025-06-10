@@ -6,7 +6,8 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
   const meal = document.getElementById("meal").value;
 
   // 데이터 로드
-  fetch("data.json")
+  fetch("https://joeunseonn.github.io/bigdata_bentomood1/data.json")
+
     .then((response) => response.json())
     .then((data) => {
       const key = `${weather}_${mood}_${meal}`;
