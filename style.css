@@ -1,16 +1,78 @@
+/* 전체 배경 및 폰트 스타일 */
 body {
-  font-family: sans-serif;
-  padding: 30px;
-  background-color: #f5f5f5;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #fdf6ec;
+  color: #333;
+  padding: 40px;
+  line-height: 1.6;
 }
 
+/* 제목 */
+h1 {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 30px;
+}
+
+/* 폼 스타일 */
 form {
-  margin-bottom: 20px;
+  background: #ffffff;
+  border: 2px solid #f0e1c0;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* 추천 버튼 */
+button {
+  background-color: #f39c12;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e67e22;
+}
+
+/* 결과 출력 카드 */
 #result {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border: 2px solid #fae3b4;
+}
+
+#result h2 {
+  color: #e67e22;
+  margin-top: 0;
+}
+
+#result p {
+  margin: 8px 0;
 }
