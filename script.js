@@ -36,3 +36,26 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
       }
     });
 });
+
+// ✅ 인기 도시락 보기 기능 추가
+function showPopularMenus() {
+  const keys = Object.keys(localStorage);
+  const popularityList = keys
+    .map((k) => ({
+      key: k,
+      count: parseInt(localStorage.getItem(k)),
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 5); // 상위 5개 출력
+
+  let resultHtml = `<h2>🔥 인기 도시락 TOP 5</h2>`;
+  if (popularityList.length === 0) {
+    resultHtml += `<p>아직 추천 기록이 없습니다.</p>`;
+  } else {
+    popularityList.forEach((item, index) => {
+      resultHtml += `<p>${index + 1}. ${item.key} (${item.count}회)</p>`;
+    });
+  }
+
+  document.getElementById("result").innerHTML = resultHtml;
+}
