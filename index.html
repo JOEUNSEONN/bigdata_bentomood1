@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>도시락 추천 시뮬레이터</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>도시락 추천 시뮬레이터</h1>
+
+  <form id="input-form">
+    <label>오늘 날씨는?
+      <select id="weather">
+        <option value="맑음">맑음</option>
+        <option value="흐림">흐림</option>
+        <option value="비">비</option>
+        <option value="눈">눈</option>
+      </select>
+    </label><br>
+
+    <label>기분은 어떤가요?
+      <select id="mood">
+        <option value="활기참">활기참</option>
+        <option value="평온함">평온함</option>
+        <option value="우울함">우울함</option>
+        <option value="귀찮음">귀찮음</option>
+      </select>
+    </label><br>
+
+    <label>식사 시간은?
+      <select id="meal">
+        <option value="아침">아침</option>
+        <option value="점심">점심</option>
+        <option value="저녁">저녁</option>
+      </select>
+    </label><br>
+
+    <button type="submit">추천 받기</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
