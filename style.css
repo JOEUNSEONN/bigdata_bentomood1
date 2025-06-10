@@ -5,11 +5,11 @@ body {
   font-family: 'GmarketSans', sans-serif;
   background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
   background-image: 
-    url('https://cdn-icons-png.flaticon.com/512/1046/1046843.png'),
+    url('https://cdn-icons-png.flaticon.com/512/685/685352.png'), 
     linear-gradient(to bottom right, #fff3e0, #ffe0b2);
   background-repeat: no-repeat, no-repeat;
   background-position: top 30px right 30px, center;
-  background-size: 120px, cover;
+  background-size: 100px, cover;
   color: #333;
   padding: 40px;
   line-height: 1.6;
