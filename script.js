@@ -10,9 +10,6 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
 
     .then((response) => response.json())
     .then((data) => {
-      console.log("선택된 키:", key);
-console.log("메뉴 목록:", menuList);
-
       const key = `${weather}_${mood}_${meal}`;
       const menuList = data[key];
 
